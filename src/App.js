@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect, useContext} from 'react';
+import Login from './components/Users/Login';
+import Register from './components/Users/Register';
+import { BrowserRouter as Router, Route, useHistory } from "react-router-dom";
+import UserAuthContext from './context/UserAuthContext';
 
 function App() {
+  
+  const context = useContext(UserAuthContext);
+  const [userInfo, setUserInfo] = useState({});
+  let history = useHistory();
+
+  useEffect(()=>{
+    if(Object.keys(userInfo).length>0){
+      console.log(userInfo);
+    }
+  },[userInfo]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Route path="/Register">
+          <Register setUserInfo={setUserInfo} />
+        </Route>
+        {/* <Route path="/" exact>
+          {registerDone && <Login setUserInfo={setUserInfo} />}
+          {!registerDone && <Register setUserInfo={setUserInfo} />}
+        </Route> */}
+        <Route path='/Login'>
+          <Login setUserInfo={setUserInfo} />
+        </Route>
+      </div>
+    </Router>
   );
 }
 

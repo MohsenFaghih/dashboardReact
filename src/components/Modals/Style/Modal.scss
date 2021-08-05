@@ -1,0 +1,29 @@
+.modal{
+    background-color: #80808070;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.mainModal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 35px 50px;
+    text-align: center;
+}
+.mainModal h4{
+    color: #040404c7;
+    font-family: 'poppine';
+    font-size: 22px;
+}
+.mainModal span{
+    font-family: poppine-italic;
+    font-size: 15px;
+    color: #f34141e8;
+}

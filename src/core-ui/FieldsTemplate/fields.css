@@ -1,0 +1,133 @@
+@font-face {
+  font-family: poppine;
+  src: url("../../assests/fonts/poppine/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: poppine-italic;
+  src: url("../../assests/fonts/poppine/Poppins-Italic.ttf");
+}
+
+body {
+  margin: 0 !important;
+}
+
+.mainDiv {
+  height: auto;
+  width: auto;
+}
+
+form {
+  width: 400px;
+  height: auto;
+  padding: 50px 20px;
+  margin: auto;
+  text-align: left;
+}
+
+.fieldDiv {
+  display: block;
+  padding: 5px 0;
+  position: relative;
+}
+
+.fieldDiv label, .fieldDiv input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+}
+
+.fieldDiv label {
+  font-family: poppine;
+}
+
+.fieldDiv input {
+  width: 380px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 1px 1px 5px #adadad;
+          box-shadow: 1px 1px 5px #adadad;
+  color: #3f76c3;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: 'poppine-italic';
+}
+
+.fieldDiv input:focus {
+  border: none;
+  -webkit-box-shadow: 1px 1px 10px #0072c3;
+          box-shadow: 1px 1px 10px #0072c3;
+  outline: none;
+}
+
+.fieldDiv input::-webkit-input-placeholder {
+  font-family: poppine-italic;
+  font-size: 11px;
+  color: #7a7a7a;
+}
+
+.fieldDiv input:-ms-input-placeholder {
+  font-family: poppine-italic;
+  font-size: 11px;
+  color: #7a7a7a;
+}
+
+.fieldDiv input::-ms-input-placeholder {
+  font-family: poppine-italic;
+  font-size: 11px;
+  color: #7a7a7a;
+}
+
+.fieldDiv input::placeholder {
+  font-family: poppine-italic;
+  font-size: 11px;
+  color: #7a7a7a;
+}
+
+.btnDiv {
+  text-align: right;
+  display: -ms-grid;
+  display: grid;
+}
+
+.submitBtn {
+  margin-top: 30px;
+  padding: 8px 40px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  border: none;
+  color: white;
+  background-color: #05a06c;
+  font-family: poppine;
+  cursor: pointer;
+}
+
+.loginOrReg {
+  color: #0072c3;
+  cursor: pointer;
+  margin: 20px 0;
+  text-align: right;
+  font-family: poppine;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.visible {
+  display: block !important;
+}
+
+.alert {
+  width: 100%;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 17px;
+  text-align: right;
+  font-family: 'poppine-italic';
+  font-size: 13px;
+  color: red;
+}
+/*# sourceMappingURL=fields.css.map */
